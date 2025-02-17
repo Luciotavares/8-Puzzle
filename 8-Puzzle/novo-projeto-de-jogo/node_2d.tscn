@@ -21,34 +21,34 @@ script = ExtResource("1_8aauo")
 position = Vector2(-282.5, -271.5)
 shape = SubResource("RectangleShape2D_bk0i1")
 
-[node name="1" type="Sprite2D" parent="CollisionShape2D"]
-position = Vector2(-143.5, -153.5)
+[node name="p1" type="Sprite2D" parent="CollisionShape2D"]
+position = Vector2(-143, -153)
 texture = ExtResource("1_mkcer")
 
-[node name="2" type="Sprite2D" parent="CollisionShape2D"]
-position = Vector2(-9.5, -151.5)
+[node name="p2" type="Sprite2D" parent="CollisionShape2D"]
+position = Vector2(-9, -151)
 texture = ExtResource("2_bydog")
 
-[node name="3" type="Sprite2D" parent="CollisionShape2D"]
-position = Vector2(122.5, -151.5)
+[node name="p3" type="Sprite2D" parent="CollisionShape2D"]
+position = Vector2(122, -151)
 texture = ExtResource("3_mlxle")
 
-[node name="4" type="Sprite2D" parent="CollisionShape2D"]
-position = Vector2(-141.5, -26.5)
+[node name="p4" type="Sprite2D" parent="CollisionShape2D"]
+position = Vector2(-141, -26)
 texture = ExtResource("4_nroyd")
 
-[node name="5" type="Sprite2D" parent="CollisionShape2D"]
-position = Vector2(-7.5, -26.5)
+[node name="p5" type="Sprite2D" parent="CollisionShape2D"]
+position = Vector2(-7, -26)
 texture = ExtResource("5_q86i1")
 
-[node name="6" type="Sprite2D" parent="CollisionShape2D"]
-position = Vector2(118.5, -28.5)
+[node name="p6" type="Sprite2D" parent="CollisionShape2D"]
+position = Vector2(118, -28)
 texture = ExtResource("6_inmnl")
 
-[node name="7" type="Sprite2D" parent="CollisionShape2D"]
-position = Vector2(-138.5, 94.5)
+[node name="p7" type="Sprite2D" parent="CollisionShape2D"]
+position = Vector2(-138, 94)
 texture = ExtResource("7_ttmo4")
 
-[node name="8" type="Sprite2D" parent="CollisionShape2D"]
-position = Vector2(-5.5, 96.5)
+[node name="p8" type="Sprite2D" parent="CollisionShape2D"]
+position = Vector2(-5, 96)
 texture = ExtResource("8_jw6on")
