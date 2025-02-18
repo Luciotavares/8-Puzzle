@@ -57,28 +57,33 @@ func valid_movements():
 	return []
 
 func move(pos):
+	var valid = valid_movements()
+	if pos not in valid:
+		return  # Não faz nada se o movimento for inválido
+	
+	var empty_pos = find_piece_position(0)
 	var x = 0
-	var empty_i = 0
-	var empty_j = 0
 	var piece_i = 0
 	var piece_j = 0
+	var empty_i = 0
+	var empty_j = 0
 	
+	# Encontra as coordenadas da peça clicada e do espaço vazio
 	for i in range(3):
 		for j in range(3):
 			x += 1
-			if board[i][j] == 0:
-				empty_i = i
-				empty_j = j
-				
 			if x == pos:
 				piece_i = i
 				piece_j = j
-			if pos in valid_movements():
-				board[empty_i][empty_j] = board[piece_i][piece_j]
-				board[piece_i][piece_j] = 0
-				plot_board()
-				check_win()
-				
+			if x == empty_pos:
+				empty_i = i
+				empty_j = j
+	
+	# Troca as posições
+	board[empty_i][empty_j] = board[piece_i][piece_j]
+	board[piece_i][piece_j] = 0
+	plot_board()
+	check_win()
 func find_piece_position(piece):
 	var x = 0
 	for i in range(3):
@@ -91,6 +96,7 @@ func find_piece_position(piece):
 func check_win():
 	if board == [[1,2,3],[4,5,6],[7,8,0]]:
 		print("Parabéns!")
+		
 
 func _ready():
 	# Embaralhar o tabuleiro com 100 movimentos válidos aleatórios
