@@ -1,0 +1,67 @@
+[gd_scene load_steps=12 format=3 uid="uid://d4d0nhply78cj"]
+
+[ext_resource type="Script" path="res://node_2d.gd" id="1_mjkxi"]
+[ext_resource type="Texture2D" uid="uid://dmc4ffxlxpung" path="res://img/tile1.png" id="1_ugcsx"]
+[ext_resource type="Texture2D" uid="uid://bx55btfq35yq8" path="res://img/tile2.png" id="3_vds3q"]
+[ext_resource type="Texture2D" uid="uid://dqlmsrki8skwh" path="res://img/tile3.png" id="4_2qpq6"]
+[ext_resource type="Texture2D" uid="uid://dt8tttn4dkhem" path="res://img/tile4.png" id="5_ap7d2"]
+[ext_resource type="Texture2D" uid="uid://bdlca3lil0r62" path="res://img/tile5.png" id="6_4thd8"]
+[ext_resource type="Texture2D" uid="uid://hji4ia03d647" path="res://img/tile6.png" id="7_omhi1"]
+[ext_resource type="Texture2D" uid="uid://u6eckxurtfhw" path="res://img/tile7.png" id="8_8eevl"]
+[ext_resource type="Texture2D" uid="uid://dwl77i5vacans" path="res://img/tile8.png" id="9_oqabj"]
+[ext_resource type="Texture2D" uid="uid://bpp221541k0kq" path="res://img/empty.png" id="10_gixax"]
+[ext_resource type="Texture2D" uid="uid://dsw1s8f148bli" path="res://img/Capturar.PNG" id="11_6dnl7"]
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(248, 108)
+script = ExtResource("1_mjkxi")
+
+[node name="p1" type="Sprite2D" parent="."]
+position = Vector2(125, 125)
+texture = ExtResource("1_ugcsx")
+
+[node name="p2" type="Sprite2D" parent="."]
+position = Vector2(375, 125)
+texture = ExtResource("3_vds3q")
+
+[node name="p3" type="Sprite2D" parent="."]
+position = Vector2(625, 125)
+texture = ExtResource("4_2qpq6")
+
+[node name="p4" type="Sprite2D" parent="."]
+position = Vector2(125, 375)
+texture = ExtResource("5_ap7d2")
+
+[node name="p5" type="Sprite2D" parent="."]
+position = Vector2(375, 375)
+texture = ExtResource("6_4thd8")
+
+[node name="p6" type="Sprite2D" parent="."]
+position = Vector2(625, 375)
+texture = ExtResource("7_omhi1")
+
+[node name="p7" type="Sprite2D" parent="."]
+position = Vector2(125, 625)
+texture = ExtResource("8_8eevl")
+
+[node name="p8" type="Sprite2D" parent="."]
+position = Vector2(375, 625)
+texture = ExtResource("9_oqabj")
+
+[node name="p9" type="Sprite2D" parent="."]
+position = Vector2(625, 625)
+texture = ExtResource("10_gixax")
+
+[node name="Window" type="Window" parent="."]
+title = "Pop up"
+initial_position = 1
+size = Vector2i(500, 500)
+visible = false
+
+[node name="Camera2D" type="Camera2D" parent="Window"]
+
+[node name="Sprite2D" type="Sprite2D" parent="Window/Camera2D"]
+texture = ExtResource("11_6dnl7")
+
+[connection signal="close_requested" from="Window" to="." method="_on_window_close_requested"]
+[connection signal="visibility_changed" from="Window" to="." method="_on_window_visibility_changed"]
